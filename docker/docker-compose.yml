@@ -1,0 +1,24 @@
+version: '3'
+services:
+  jigsaw_web_d8_db:
+    image: mysql:5.7.8
+    command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
+    environment:
+      MYSQL_DATABASE: jigsaw_web_d8
+      MYSQL_ROOT_PASSWORD: jigsaw_web_d8
+    ports:
+      - "3306:3306"
+    volumes:
+      - jigsaw_web_d8_db_data:/var/lib/mysql
+    restart: always
+  jigsaw_web_d8_drupal:
+    depends_on:
+      - jigsaw_web_d8_db
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ..:/app
+    restart: always
+volumes:
+  jigsaw_web_d8_db_data:
