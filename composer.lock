@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "06482d705031945e2369131529af99fd",
-=======
-    "content-hash": "27997975d7773be9f1d54cd0657c4b5e",
->>>>>>> 2a5fb4472eee77553d39f09e234d96e0a77246cb
     "packages": [
         {
             "name": "academicpuma/citeproc-php",
@@ -4485,7 +4481,6 @@
             }
         },
         {
-<<<<<<< HEAD
             "name": "drupal/showcase_lite",
             "version": "1.1.0",
             "source": {
@@ -4549,8 +4544,6 @@
             }
         },
         {
-=======
->>>>>>> 2a5fb4472eee77553d39f09e234d96e0a77246cb
             "name": "drupal/token",
             "version": "1.5.0",
             "source": {
