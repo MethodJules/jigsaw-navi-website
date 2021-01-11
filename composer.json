@@ -54,6 +54,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/leaflet": "^1.1",
         "drupal/leaflet_markercluster": "^1.0@alpha",
+        "drupal/matomo": "^1.11",
         "drupal/migrate_plus": "^4.1",
         "drupal/migrate_tools": "^4.1",
         "drupal/migrate_upgrade": "^3.0",
