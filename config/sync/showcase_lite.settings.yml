@@ -182,7 +182,7 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: 'public://1_Primary_logo_256.jpg'
+  path: 'public://jigsaw_logo_0.png'
 favicon:
   use_default: true
 premium_description: ''
