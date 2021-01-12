@@ -1,0 +1,23 @@
+uuid: f3fcec69-7678-4190-8203-584349186563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.projekt_publikationen
+  module:
+    - text
+id: node.projekt_publikationen.body
+field_name: body
+entity_type: node
+bundle: projekt_publikationen
+label: Abstract
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

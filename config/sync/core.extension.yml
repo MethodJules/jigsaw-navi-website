@@ -40,6 +40,7 @@ module:
   leaflet: 0
   leaflet_views: 0
   link: 0
+  matomo: 0
   menu_ui: 0
   migrate: 0
   migrate_drupal: 0
@@ -47,12 +48,14 @@ module:
   migrate_plus: 0
   migrate_tools: 0
   migrate_upgrade: 0
+  network_person: 0
   nlp_search: 0
   node: 0
   optional_end_date: 0
   options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   quickedit: 0
   rdf: 0
   search: 0

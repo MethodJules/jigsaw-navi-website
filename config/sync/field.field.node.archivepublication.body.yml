@@ -1,0 +1,23 @@
+uuid: 28a7f074-a86e-4687-89c3-1956a0d13123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.archivepublication
+  module:
+    - text
+id: node.archivepublication.body
+field_name: body
+entity_type: node
+bundle: archivepublication
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

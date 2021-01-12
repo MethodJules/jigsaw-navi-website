@@ -1,0 +1,31 @@
+uuid: 4f2b5264-5125-44b9-a8fb-80fe280c44d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projekt_publikationen.body
+    - node.type.projekt_publikationen
+  module:
+    - text
+    - user
+id: node.projekt_publikationen.teaser
+targetEntityType: node
+bundle: projekt_publikationen
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

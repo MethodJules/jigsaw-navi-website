@@ -1,0 +1,29 @@
+uuid: 776b2945-df29-43c7-b692-287879aa7f49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.archivepublication.body
+    - node.type.archivepublication
+  module:
+    - text
+    - user
+id: node.archivepublication.default
+targetEntityType: node
+bundle: archivepublication
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

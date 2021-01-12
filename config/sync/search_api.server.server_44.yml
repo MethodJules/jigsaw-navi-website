@@ -8,14 +8,14 @@ dependencies:
   module:
     - search_api_solr
 id: server_44
-name: 'Server 44'
+name: 'Docker Solr Server'
 description: ''
 backend: search_api_solr
 backend_config:
   connector: standard
   connector_config:
     scheme: http
-    host: 147.172.96.69
+    host: 'http://search.x-navi.de'
     port: '80'
     path: /solr/women
     core: women_core

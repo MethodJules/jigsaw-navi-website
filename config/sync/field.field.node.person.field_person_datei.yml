@@ -13,8 +13,8 @@ id: node.person.field_person_datei
 field_name: field_person_datei
 entity_type: node
 bundle: person
-label: Datei
-description: ''
+label: File
+description: 'Add a document or publication if available. Make sure that no usage rights or personal rights are violated'
 required: false
 translatable: false
 default_value: {  }

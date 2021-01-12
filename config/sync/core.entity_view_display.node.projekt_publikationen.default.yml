@@ -1,0 +1,47 @@
+uuid: 69eb3007-f92b-4fb9-ae48-cd94da25ec9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projekt_publikationen.body
+    - field.field.node.projekt_publikationen.field_bib_reference
+    - field.field.node.projekt_publikationen.field_pdf_file
+    - node.type.projekt_publikationen
+  module:
+    - file
+    - text
+    - user
+id: node.projekt_publikationen.default
+targetEntityType: node
+bundle: projekt_publikationen
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bib_reference:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_pdf_file:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

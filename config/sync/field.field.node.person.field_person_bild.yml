@@ -13,8 +13,8 @@ id: node.person.field_person_bild
 field_name: field_person_bild
 entity_type: node
 bundle: person
-label: Bild
-description: ''
+label: Picture
+description: 'Add picture if available. Make sure that no usage rights or personal rights are violated.'
 required: false
 translatable: false
 default_value: {  }

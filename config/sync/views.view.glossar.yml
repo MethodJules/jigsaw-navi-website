@@ -17,7 +17,6 @@ description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -66,7 +65,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Glossarterm
+          label: 'Glossary term'
           exclude: false
           alter:
             alter_text: false
@@ -197,6 +196,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -207,8 +208,11 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts: {  }
-      title: Glossar
+      title: Glossary
       header: {  }
       footer: {  }
       empty: {  }
@@ -231,14 +235,14 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: glossar
+      path: glossary
       menu:
         type: normal
         title: Glossary
         description: ''
         expanded: false
         parent: ''
-        weight: -45
+        weight: -41
         context: '0'
         menu_name: main
         enabled: true

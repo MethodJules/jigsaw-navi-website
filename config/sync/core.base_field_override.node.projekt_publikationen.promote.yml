@@ -1,0 +1,22 @@
+uuid: 27929477-ce71-48c6-bcc3-754bd086b2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.projekt_publikationen
+id: node.projekt_publikationen.promote
+field_name: promote
+entity_type: node
+bundle: projekt_publikationen
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

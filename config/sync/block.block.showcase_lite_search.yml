@@ -1,6 +1,6 @@
 uuid: 485c702c-5182-418f-ba3d-4bf37b9695f8
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -20,6 +20,7 @@ settings:
   label: 'Quick Search'
   provider: search
   label_display: visible
+  page_id: ''
 visibility:
   request_path:
     id: request_path

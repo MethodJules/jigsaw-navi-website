@@ -1,0 +1,19 @@
+uuid: 1e4a0af0-48da-42f8-8794-216a68a3cefa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_courtesy
+    - node.type.person
+id: node.person.field_courtesy
+field_name: field_courtesy
+entity_type: node
+bundle: person
+label: Courtesy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

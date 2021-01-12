@@ -1,0 +1,21 @@
+uuid: b34f07ba-ccb1-4629-87d5-712f73bd1e30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bib_reference
+    - node.type.projekt_publikationen
+  module:
+    - text
+id: node.projekt_publikationen.field_bib_reference
+field_name: field_bib_reference
+entity_type: node
+bundle: projekt_publikationen
+label: Reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

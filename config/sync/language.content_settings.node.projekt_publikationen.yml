@@ -1,0 +1,11 @@
+uuid: 1b936f9f-94fc-4c4f-ab5a-aefc26fd6f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.projekt_publikationen
+id: node.projekt_publikationen
+target_entity_type_id: node
+target_bundle: projekt_publikationen
+default_langcode: site_default
+language_alterable: false
