@@ -1,0 +1,22 @@
+{{ attach_library('siddybot/siddybot')}}
+{{ attach_library('siddybot/axios')}}
+<div id="app">
+    {% verbatim %}
+      <section ref="chatArea" class="chatArea">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src="https://placekitten.com/40/40" alt="picture">
+          </div>
+            <p v-for="message in messages" class="message" :class="{'message-out': message.author === 'you', 'message-in': message.author !== 'you'}">
+              {{ message.body }}
+            </p>
+        </div>
+        
+        <form @submit.prevent="sendMessage('out')" class="chat-input">
+            <input v-model="youMessage" type="text" placeholder="Please type your message here..."><button type="submit">Send</button>
+        </form> 
+      </section>
+          
+     
+    {% endverbatim %}
+</div>

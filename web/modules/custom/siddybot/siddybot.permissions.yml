@@ -1,0 +1,4 @@
+administer siddybot configuration:
+  title: 'Administer siddybot configuration'
+  description: 'Optional description.'
+  restrict access: true

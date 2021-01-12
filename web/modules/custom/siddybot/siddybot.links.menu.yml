@@ -1,0 +1,6 @@
+siddybot.settings_form:
+  title: siddybot
+  description: Configure siddybot.
+  parent: system.admin_config_system
+  route_name: siddybot.settings_form
+  weight: 10

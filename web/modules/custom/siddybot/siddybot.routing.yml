@@ -1,0 +1,15 @@
+siddybot.example:
+  path: '/siddybot/example'
+  defaults:
+    _title: 'Siddybot'
+    _controller: '\Drupal\siddybot\Controller\SiddybotController::build'
+  requirements:
+    _permission: 'access content'
+
+siddybot.settings_form:
+  path: '/admin/config/system/siddybot'
+  defaults:
+    _title: 'siddybot settings'
+    _form: 'Drupal\siddybot\Form\SettingsForm'
+  requirements:
+    _permission: 'administer siddybot configuration'
