@@ -189,7 +189,7 @@ function nlp_search_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityI
 
                             $build['network_graph'] = array(
                                 '#markup' => '<div id="nlp-network-graph"></div>',
-                                '#weight' => 3
+                                '#weight' => 99
                             );
 
                             //Librarys laden und Arrays an Javascript übergeben.
