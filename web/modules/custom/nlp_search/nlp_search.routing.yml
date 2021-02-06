@@ -56,3 +56,11 @@ nlp_search.add_entity_form:
   requirements:
     _permission: 'administer site configuration'
     _custom_access: '\Drupal\nlp_search\Controller\CheckAccessController::checkAccess'
+
+nlp_search.autocomplete.entity.type:
+  path: '/nlp-search/autocomplete'
+  defaults:
+    _controller: 'Drupal\nlp_search\Controller\AutocompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'

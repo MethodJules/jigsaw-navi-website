@@ -26,6 +26,7 @@ class EditEntitiesForm extends FormBase
     //Die Funktion baut das Formular für das Editieren von Entitäten auf
     public function buildForm(array $form, FormStateInterface $form_state)
     {
+        
         $form = array();
         $config = \Drupal::config('nlp_search.settings');
         $saved_python_flask_url = $config->get('nlp_search_basic_python_flask_url');
@@ -69,6 +70,7 @@ class EditEntitiesForm extends FormBase
 
                         //Für jede Entität die Formularfelder bauen
                         foreach ($entities['result'] as $ent) {
+                            //dsm($ent);
                             $form['entities']['entity' . $counter] = [
                                 '#type' => 'fieldset',
                                 '#title' => $ent['ent_text'],
@@ -76,6 +78,7 @@ class EditEntitiesForm extends FormBase
                             $form['entities']['entity' . $counter]['ner'] = [
                                 '#type' => 'textfield',
                                 '#default_value' => $ent['ent_ner'],
+                                '#autocomplete_route_name' => 'nlp_search.autocomplete.entity.type',
                             ];
 
                             $form['entities']['entity' . $counter]['text'] = [
