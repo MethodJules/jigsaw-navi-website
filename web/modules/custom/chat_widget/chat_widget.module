@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme()
+ */
+
+function chat_widget_theme($existing, $type, $theme, $path) {
+    //global $base_path;
+    return [
+      'chat_widget' => [
+        'variables' => [
+          'body' => null,
+        ],
+      ],
+      'chat_widget_form' => [
+        'render element' => 'form',
+      ],
+    ]; 
+ }

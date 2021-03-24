@@ -1,0 +1,33 @@
+{{ attach_library('chat_widget/chat_widget') }}
+{{ attach_library('chat_widget/axios') }}
+
+
+
+<div id="x-navi-chat-widget">
+    <div class="chat-widget-body">
+        <div class="chat-widget-wrapper">
+            <div class="title">Siddy Bot</div>
+            <div id="x-navi-chat-messages" class="form">
+                {% verbatim %}
+                <div v-for="message in messages">
+                    <div class="inbox" :class="{'bot-inbox': message.author === 'bot', 'user-inbox': message.author !== 'bot' }">
+                        <div class="icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="msg-header">
+                            <p>{{message.body}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-field">
+                <div class="input-data">
+                    <input type="text" v-model="youMessage" placeholder="Type something here..." @keyup.enter="send">
+                    <button @click="send">Send</button>
+                </div>
+            </div>
+            {% endverbatim %}
+        </div>
+    </div>
+</div>

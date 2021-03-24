@@ -1,0 +1,28 @@
+chat_widget.content:
+    path: '/chat/content'
+    defaults:
+        _controller: 'Drupal\chat_widget\Controller\ChatWidgetController::content'
+    requirements:
+        _permission: 'access content'
+
+chat_widget.form:
+    path: '/chat/form'
+    defaults:
+        _form: 'Drupal\chat_widget\Form\ChatWidgetForm'
+    requirements:
+        _permission: 'access content'
+
+chat_widget.settings_form:
+    path: '/chat/settings/form'
+    defaults:
+        _form: 'Drupal\chat_widget\Form\ChatWidgetAdministrationForm'
+    requirements:
+        _permission: 'access content'
+
+chat_widget.log:
+    path: '/chat/log'
+    defaults:
+        _controller: 'Drupal\chat_widget\Controller\ChatWidgetController::log'
+    methods: [POST]
+    requirements:
+        _access: 'TRUE'

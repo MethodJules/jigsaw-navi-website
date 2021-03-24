@@ -1,0 +1,36 @@
+chat_widget:
+  version: 1.x
+  js:
+    js/chat_widget.js: {}
+  css:
+    theme:
+      css/chat_widget.css: {}
+  dependencies:
+    - core/drupalSettings
+    - chat_widget/vuejs
+
+chat_widget_form:
+  version: 1.x
+  css:
+    theme:
+      css/chat_widget_form.css: {}
+
+# Third-party library (CDN).
+vuejs:
+  remote: https://vuejs.org
+  version: 2.0.5
+  license:
+    name: MIT
+    url: https://github.com/vuejs/vue/blob/dev/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js: {type: external, minified: true}
+
+axios:
+  remote: https://axios.org
+  version: 0.21.1
+  license:
+    name: MIT
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js: {type: external, minified: true}
