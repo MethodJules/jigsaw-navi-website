@@ -11,7 +11,7 @@ var App = new Vue({
     },
     methods: {
         sendMessage(direction) {
-            const url = "http://localhost:5005/webhooks/rest/webhook";
+            const url = "http://siddybot.x-navi.de/webhooks/rest/webhook";
             if(direction === 'out') {
                 //axios.get(url).then(response => {
                 //    console.log(response.data)
