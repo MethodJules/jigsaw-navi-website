@@ -8,6 +8,7 @@ chat_widget:
   dependencies:
     - core/drupalSettings
     - chat_widget/vuejs
+    - chat_widget/fontawesome
 
 chat_widget_form:
   version: 1.x
@@ -34,3 +35,8 @@ axios:
     gpl-compatible: true
   js:
     https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js: {type: external, minified: true}
+
+fontawesome:
+  css:
+    component:
+      //use.fontawesome.com/releases/v5.15.1/css/all.css: {}
