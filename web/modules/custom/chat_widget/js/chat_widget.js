@@ -1,5 +1,5 @@
 (function(Drupal, drupalSettings) {
-    console.log(drupalSettings)
+    //console.log(drupalSettings)
     //Vue
     var App = new Vue({
         el: '#x-navi-chat-widget',
@@ -24,17 +24,20 @@
                     author: 'you'
                 }*/
             ],
+            sender: ''
         },
     
         methods: {
             send() {
                 console.log('Sending...')
+                console.log(this.sender)
                 this.messages.push({body: this.youMessage, author: 'you'})
     
                 //const url = "http://localhost:5005/webhooks/rest/webhook";
                 const url = drupalSettings.rasaBotUrl
+                const senderId = drupalSettings.senderId
                 axios.post(url,{
-                    sender: 'you',
+                    sender: senderId,
                     message: this.youMessage
                 }).then((response) => {
                     console.log(response)
@@ -48,6 +51,17 @@
                     console.log(error)
                     this.messages.push({body: 'Es ist ein Fehler passiert', author: 'bot'})
                 });
+            },
+
+            generateRandomToken() {
+                const result = [];
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                const charactersLength = characters.length;
+                for (var i = 0; i < length; i++) {
+                    result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+                }
+                return result.join('');
+
             },
     
             log() {
@@ -81,6 +95,10 @@
                 }, 100);
             },
         },
+
+        mounted() {
+            this.sender = this.generateRandomToken(5)
+        }
     })
     
 

@@ -22,6 +22,7 @@ class ChatWidgetController extends ControllerBase {
                 'drupalSettings' => [
                     'baseUrl' => $base_url,
                     'rasaBotUrl' => $rasa_bot_url,
+                    'senderId' => $this->randomString(),
                 ]
             ],
 
@@ -36,5 +37,16 @@ class ChatWidgetController extends ControllerBase {
         Drupal::logger('chat_widget,')->notice($post_data['message']);
         //dsm($post_data);
         return new JsonResponse($post_data);
+    }
+
+    public function randomString($length = 8) {
+        $str = "";
+        $characters = array_merge(range('A','Z'), range('0','9'));
+        $max = count($characters) - 1;
+        for ($i = 0; $i < $length; $i++) {
+            $rand = mt_rand(0, $max);
+            $str .= $characters[$rand];
+        }
+        return $str;
     }
 }
