@@ -24,7 +24,8 @@
                     author: 'you'
                 }*/
             ],
-            sender: ''
+            sender: '',
+            buttons: [],
         },
     
         methods: {
@@ -32,7 +33,7 @@
                 console.log('Sending...')
                 console.log(this.sender)
                 this.messages.push({body: this.youMessage, author: 'you'})
-    
+                this.buttons = []
                 //const url = "http://localhost:5005/webhooks/rest/webhook";
                 const url = drupalSettings.rasaBotUrl
                 const senderId = drupalSettings.senderId
@@ -79,7 +80,35 @@
             recvieveMessageFromBot(botmessages) {
                 botmessages.forEach(botmessage => {
                     console.log(botmessage.text)
-                    this.messages.push({body: botmessage.text, author: 'bot'})
+                    //if(botmessage.buttons) {
+                    //    botmessage.buttons.forEach(element => {
+                    //        console.log(element)
+                    //        this.buttons.push({title: element.title, payload: element.payload})
+                    //    });
+                    //} else {
+                        this.messages.push({body: botmessage.text, author: 'bot', buttons: botmessage.buttons, payload: botmessage.payload})
+                    //}
+                });
+            },
+
+            sendPayload(payload) {
+                console.log(payload)
+                const url = drupalSettings.rasaBotUrl
+                const senderId = drupalSettings.senderId
+                axios.post(url,{
+                    sender: senderId,
+                    message: payload
+                }).then((response) => {
+                    console.log(response)
+                    console.log('Send to drupal')
+                    //this.log()
+                    const botmessages = response.data
+                    //this.messages.push({body: botmessage.text, author: 'bot'})
+                    this.recvieveMessageFromBot(botmessages)
+                    this.youMessage = ''
+                }, (error) => {
+                    console.log(error)
+                    this.messages.push({body: 'Es ist ein Fehler passiert', author: 'bot'})
                 });
             }
         },

@@ -12,10 +12,19 @@
                 <div v-for="message in messages">
                     <div class="inbox" :class="{'bot-inbox': message.author === 'bot', 'user-inbox': message.author !== 'bot' }">
                         <div class="icon">
-                            <i class="fas fa-user"></i>
+                            <div v-if="message.author === 'bot'">
+                                <img src="../sites/default/files/siddybot.png"></img>
+                            </div>
+                            <div v-else>
+                                <img src="../sites/default/files/user.png"></img>
+                            </div>
+                    
                         </div>
                         <div class="msg-header">
                             <p>{{message.body}}</p>
+                                <div v-for="button in message.buttons" :key="buttons.title">
+                                    <button @click="sendPayload(button.payload)">{{button.title}}</button>
+                                </div>
                         </div>
                     </div>
                 </div>
