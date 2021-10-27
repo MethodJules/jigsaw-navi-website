@@ -6,6 +6,10 @@
         data: {
             youMessage: '',
             messages: [
+		{
+			body: 'Hi! My name is SiddyBot I can help you with frequently asked questions (FAQ) or if you want to know something about persons (like my role model Siddy Wronsky) or organizations. To start, say "Hi!"' ,
+			author: 'bot'
+		}
                 /*
                 {
                     body: 'Hi there',
