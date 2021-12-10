@@ -12,7 +12,7 @@ dependencies:
 id: exposedformsolr_searchpage_1
 theme: showcase_lite
 region: sidebar_second
-weight: -7
+weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:solr_search-page_1'
 settings:

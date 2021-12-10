@@ -19,33 +19,9 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
-      size: '60'
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-  bibcite_abst_e:
-    type: string_textarea
-    settings:
-      rows: 4
-      placeholder: ''
-    weight: 6
-    region: content
-    third_party_settings: {  }
-  bibcite_abst_f:
-    type: string_textarea
-    settings:
-      rows: 4
-      placeholder: ''
-    weight: 7
-    region: content
-    third_party_settings: {  }
-  bibcite_access_date:
-    type: string_textfield
-    weight: 50
-    region: content
-    settings:
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   bibcite_accession_number:
     type: string_textfield
@@ -63,14 +39,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  bibcite_auth_address:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 16
-    region: content
-    third_party_settings: {  }
   bibcite_call_number:
     type: string_textfield
     weight: 35
@@ -78,70 +46,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  bibcite_citekey:
-    type: string_textfield
-    weight: 37
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_custom1:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 9
-    region: content
-    third_party_settings: {  }
-  bibcite_custom2:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 10
-    region: content
-    third_party_settings: {  }
-  bibcite_custom3:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 11
-    region: content
-    third_party_settings: {  }
-  bibcite_custom4:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 12
-    region: content
-    third_party_settings: {  }
-  bibcite_custom5:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 13
-    region: content
-    third_party_settings: {  }
-  bibcite_custom6:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 14
-    region: content
-    third_party_settings: {  }
-  bibcite_custom7:
-    type: string_textarea
-    settings:
-      rows: 1
-      placeholder: ''
-    weight: 15
-    region: content
     third_party_settings: {  }
   bibcite_date:
     type: string_textfield
@@ -183,38 +87,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  bibcite_issue:
-    type: string_textfield
-    weight: 22
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_label:
-    type: string_textfield
-    weight: 49
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_lang:
-    type: string_textfield
-    weight: 28
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_notes:
-    type: string_textarea
-    settings:
-      rows: 4
-      placeholder: ''
-    weight: 8
-    region: content
-    third_party_settings: {  }
   bibcite_number:
     type: string_textfield
     weight: 24
@@ -223,25 +95,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  bibcite_number_of_volumes:
-    type: string_textfield
-    weight: 23
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   bibcite_original_publication:
     type: string_textfield
     weight: 45
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_other_author_affiliations:
-    type: string_textfield
-    weight: 46
     region: content
     settings:
       size: 60
@@ -295,38 +151,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  bibcite_remote_db_name:
-    type: string_textfield
-    weight: 47
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_remote_db_provider:
-    type: string_textfield
-    weight: 48
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_reprint_edition:
-    type: string_textfield
-    weight: 29
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_research_notes:
-    type: string_textfield
-    weight: 40
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   bibcite_secondary_title:
     type: string_textfield
     weight: 18
@@ -335,33 +159,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  bibcite_section:
-    type: string_textfield
-    weight: 21
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   bibcite_short_title:
     type: string_textfield
     weight: 42
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_tertiary_title:
-    type: string_textfield
-    weight: 41
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  bibcite_translated_title:
-    type: string_textfield
-    weight: 44
     region: content
     settings:
       size: 60
@@ -422,6 +222,13 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 2
@@ -440,4 +247,29 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  bibcite_abst_e: true
+  bibcite_abst_f: true
+  bibcite_access_date: true
+  bibcite_auth_address: true
+  bibcite_citekey: true
+  bibcite_custom1: true
+  bibcite_custom2: true
+  bibcite_custom3: true
+  bibcite_custom4: true
+  bibcite_custom5: true
+  bibcite_custom6: true
+  bibcite_custom7: true
+  bibcite_issue: true
+  bibcite_label: true
+  bibcite_lang: true
+  bibcite_notes: true
+  bibcite_number_of_volumes: true
+  bibcite_other_author_affiliations: true
+  bibcite_remote_db_name: true
+  bibcite_remote_db_provider: true
+  bibcite_reprint_edition: true
+  bibcite_research_notes: true
+  bibcite_section: true
+  bibcite_tertiary_title: true
+  bibcite_translated_title: true

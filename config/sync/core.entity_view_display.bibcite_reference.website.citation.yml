@@ -76,4 +76,5 @@ hidden:
   bibcite_year: true
   keywords: true
   langcode: true
+  search_api_excerpt: true
   uid: true

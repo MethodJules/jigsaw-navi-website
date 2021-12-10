@@ -13,7 +13,7 @@ entity_type: node
 type: daterange
 settings:
   datetime_type: allday
-  optional_end_date: 1
+  optional_end_date: true
 module: datetime_range
 locked: false
 cardinality: 1
