@@ -2,11 +2,6 @@ uuid: 253b16fe-ef58-4f4c-b904-cf24dbb83a05
 langcode: en
 status: true
 dependencies:
-  module:
-    - search_api_solr
-    - node
-    - taxonomy
-    - search_api
   config:
     - field.storage.node.field_academic_activities
     - field.storage.node.field_activities
@@ -31,6 +26,11 @@ dependencies:
     - field.storage.node.field_year_of_migration
     - field.storage.node.field_postanschrift
     - search_api.server.server_44
+  module:
+    - search_api_solr
+    - node
+    - taxonomy
+    - search_api
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -39,26 +39,26 @@ third_party_settings:
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
       regex:
         slop: 0.5
         pattern: blank
         maxAnalyzedChars: 10000
-      usePhraseHighlighter: true
-      highlightMultiTerm: true
-      preserveMulti: false
       highlight:
         mergeContiguous: false
         requireFieldMatch: false
         snippets: 3
         fragsize: 0
+    term_modifiers:
+      slop: 10000000
+      fuzzy: 2
     advanced:
       index_prefix: ''
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-    term_modifiers:
-      slop: 10000000
-      fuzzy: 2
 id: index_44
 name: 'Index 44'
 description: ''
@@ -342,8 +342,36 @@ datasource_settings:
       selected: {  }
 processor_settings:
   add_url: {  }
-  reverse_entity_references: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -50
+  entity_status: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      field_academic_activities: taxonomy_term-parent
+      field_activities: node-field_chronics
+      field_civic_engagements: taxonomy_term-parent
+      field_education_type: taxonomy_term-parent
+      field_educational_activities: taxonomy_term-parent
+      field_other_activities: taxonomy_term-parent
+      field_professional_activities: taxonomy_term-parent
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: false
   html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -49
     all_fields: true
     fields:
       - field_archival_materials
@@ -371,42 +399,10 @@ processor_settings:
       h2: 3
       h3: 2
       strong: 2
-    weights:
-      preprocess_index: -15
-      preprocess_query: -49
-  rendered_item: {  }
-  type_boost:
-    boosts:
-      'entity:node':
-        datasource_boost: !!float 1
-      'entity:taxonomy_term':
-        datasource_boost: !!float 1
-    weights:
-      preprocess_index: 0
-  highlight:
-    highlight: always
-    highlight_partial: false
-    excerpt: true
-    excerpt_length: 256
-    exclude_fields: {  }
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
-  language_with_fallback: {  }
-  aggregated_field: {  }
-  hierarchy:
-    fields:
-      field_academic_activities: taxonomy_term-parent
-      field_activities: node-field_chronics
-      field_civic_engagements: taxonomy_term-parent
-      field_education_type: taxonomy_term-parent
-      field_educational_activities: taxonomy_term-parent
-      field_other_activities: taxonomy_term-parent
-      field_professional_activities: taxonomy_term-parent
-    weights:
-      preprocess_index: -45
   ignore_character:
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
     all_fields: false
     fields:
       - field_archival_materials
@@ -434,21 +430,25 @@ processor_settings:
       - Pi
       - Po
       - Ps
-    weights:
-      preprocess_index: -10
-      preprocess_query: -10
-  entity_status: {  }
-  content_access:
-    weights:
-      preprocess_query: -50
+  language_with_fallback: {  }
+  rendered_item: {  }
+  reverse_entity_references: {  }
   solr_date_range:
     weights:
       preprocess_index: 0
+  type_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+      'entity:taxonomy_term':
+        datasource_boost: !!float 1
 tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
   track_changes_in_references: true
 server: server_44

@@ -19,9 +19,9 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
   bibcite_accession_number:
     type: string_textfield
@@ -207,21 +207,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_file:
+    type: file_generic
     weight: 101
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   keywords:
     type: entity_reference_autocomplete_tags
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -232,10 +232,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 120
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -248,12 +248,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 100
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden:
   bibcite_abst_e: true

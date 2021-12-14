@@ -16,16 +16,16 @@ bundle: glossar
 mode: default
 content:
   body:
-    label: above
-    weight: 0
     type: text_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true

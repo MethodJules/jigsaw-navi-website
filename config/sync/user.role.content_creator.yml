@@ -1,7 +1,21 @@
 uuid: 4b62fe1a-1fa2-4fd3-81b1-24468a4dde7f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.activitiy
+    - node.type.chronic
+    - node.type.domicile
+    - node.type.glossar
+    - node.type.institutionassociation
+    - node.type.person
+    - node.type.place
+    - node.type.sweducation
+  module:
+    - bibcite_entity
+    - node
+    - quickedit
+    - tour
 id: content_creator
 label: 'Content creator'
 weight: -8

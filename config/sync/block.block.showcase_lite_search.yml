@@ -18,12 +18,12 @@ plugin: search_form_block
 settings:
   id: search_form_block
   label: 'Quick Search'
-  provider: search
   label_display: '0'
+  provider: search
   page_id: ''
 visibility:
   request_path:
     id: request_path
-    pages: "/sw-education-map\r\n/activity-map\r\n/person-domiciles\r\n/solr-search"
     negate: true
     context_mapping: {  }
+    pages: "/sw-education-map\r\n/activity-map\r\n/person-domiciles\r\n/solr-search"

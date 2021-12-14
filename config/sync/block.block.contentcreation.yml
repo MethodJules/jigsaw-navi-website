@@ -18,17 +18,17 @@ plugin: 'system_menu_block:content-creation'
 settings:
   id: 'system_menu_block:content-creation'
   label: 'Content Creation'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   user_role:
     id: user_role
-    roles:
-      content_creator: content_creator
-      administrator: administrator
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      content_creator: content_creator
+      administrator: administrator

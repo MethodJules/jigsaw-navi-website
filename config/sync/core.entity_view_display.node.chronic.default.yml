@@ -18,35 +18,35 @@ bundle: chronic
 mode: default
 content:
   field_activities:
-    label: above
-    weight: 1
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 1
     region: content
   field_sw_education:
-    label: above
-    weight: 2
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
     region: content
   field_time:
-    weight: 0
+    type: daterange_default
     label: above
     settings:
       timezone_override: ''
       format_type: html_year
       separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 0
     region: content
   links:
-    weight: 3
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   langcode: true

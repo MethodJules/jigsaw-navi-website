@@ -1,7 +1,20 @@
 uuid: 5502ce9c-7bb8-4d82-8be7-3c5486a33a7c
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.activitiy
+    - node.type.chronic
+    - node.type.domicile
+    - node.type.institutionassociation
+    - node.type.page
+    - node.type.person
+    - node.type.place
+    - node.type.sweducation
+  module:
+    - node
+    - quickedit
+    - tour
 id: collaborator
 label: Collaborator
 weight: -6

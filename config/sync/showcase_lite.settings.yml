@@ -1,3 +1,15 @@
+_core:
+  default_config_hash: Wr6gIFTlKPv78tt0GfjaEf3O-DvlTIrEwztZHauul1Q
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://Jigsaw_Logo_20_011_ohne_deutsche_farben.png'
+  use_default: false
 breadcrumb_separator: fa-angle-right
 scroll_to_top_display: 1
 scroll_to_top_icon: fa-angle-up
@@ -173,16 +185,4 @@ parallax_and_video_bg_opacity: '0'
 isotope_layout_mode: masonry
 isotope_filters_text: All
 google_maps_key: AIzaSyDyL-4KyWw_3hp-0jmZLGcJ3zMWkkJ44VI
-_core:
-  default_config_hash: Wr6gIFTlKPv78tt0GfjaEf3O-DvlTIrEwztZHauul1Q
-features:
-  node_user_picture: true
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-logo:
-  use_default: false
-  path: 'public://Jigsaw_Logo_20_011_ohne_deutsche_farben.png'
-favicon:
-  use_default: true
 premium_description: ''

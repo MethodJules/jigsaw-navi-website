@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: fSLkoLdkNM4nO9BnC-dZ8mIiMS_CcVGHv7khDTa-Bjk
 format: crossref
 types:
   book: book
@@ -53,5 +55,3 @@ fields:
   link: bibcite_url
   DOI: bibcite_doi
   note: bibcite_notes
-_core:
-  default_config_hash: fSLkoLdkNM4nO9BnC-dZ8mIiMS_CcVGHv7khDTa-Bjk

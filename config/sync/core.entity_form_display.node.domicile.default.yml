@@ -27,32 +27,32 @@ content:
     weight: 3
     region: content
     settings:
-      match_operator: CONTAINS
       form_mode: default
       override_labels: false
       label_singular: ''
       label_plural: ''
-      collapsible: false
-      collapsed: false
       allow_new: true
       allow_existing: false
+      match_operator: CONTAINS
       allow_duplicate: false
+      collapsible: false
+      collapsed: false
     third_party_settings: {  }
   field_place:
     type: inline_entity_form_complex
     weight: 1
     region: content
     settings:
-      match_operator: CONTAINS
       form_mode: default
       override_labels: false
       label_singular: ''
       label_plural: ''
-      collapsible: false
-      collapsed: false
       allow_new: true
       allow_existing: false
+      match_operator: CONTAINS
       allow_duplicate: false
+      collapsible: false
+      collapsed: false
     third_party_settings: {  }
   field_time:
     type: daterange_default
@@ -75,24 +75,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 10
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -105,11 +105,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }
