@@ -6,7 +6,6 @@ module:
   bibcite_crossref: 0
   bibcite_entity: 0
   bibcite_import: 0
-  bibcite_migrate: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -47,9 +46,6 @@ module:
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
-  migrate_plus: 0
-  migrate_tools: 0
-  migrate_upgrade: 0
   network_person: 0
   nlp_search: 0
   node: 0
@@ -72,9 +68,9 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  update: 0
   user: 0
   views_ui: 0
-  women_data: 0
   menu_link_content: 1
   views: 10
 theme:

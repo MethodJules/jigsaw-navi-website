@@ -3,4 +3,5 @@ description: Search based on NLP and semantic
 package: Custom
 configure: nlp_search.settings_form
 type: module
+core_version_requirement: ^8 || ^9 
 core: 8.x

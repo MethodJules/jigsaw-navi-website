@@ -83,7 +83,10 @@ class SearchController extends ControllerBase {
                                 $end = $start + $num_per_page;
 
                                 //Der Page ist im Drupal Core enthalten und wird intialisiert.
-                                pager_default_initialize(count($result_arr['result']), $num_per_page);
+				// deprecated: pager_default_initialize(count($result_arr['result']), $num_per_page);
+				$pagerManager = \Drupal::service('pager.manager');
+				$pager = $pagerManager->createPager(count($result_arr['result']), $num_per_page);
+
 
                                 global $base_url;
 
@@ -217,9 +220,11 @@ class SearchController extends ControllerBase {
                                 $start = $num_per_page * $page;
                                 $end = $start + $num_per_page;
 
-                                pager_default_initialize(count($result_arr['result']), $num_per_page);
-
-                                global $base_url;
+                                // deprecated: pager_default_initialize(count($result_arr['result']), $num_per_page);
+				$pagerManager = \Drupal::service('pager.manager');
+				$pager = $pagerManager->createPager(count($result_arr['result']), $num_per_page);
+				
+				global $base_url;
 
                                 for ($start; $start < $end; $start++) {
 
