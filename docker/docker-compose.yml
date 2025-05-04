@@ -1,8 +1,8 @@
 version: '3'
 services:
   jigsaw_web_d8_db:
-    image: mysql:5.7.8
-    command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
+    image: mysql:8.3
+    command: --max_allowed_packet=32505856 --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: jigsaw_web_d8
       MYSQL_ROOT_PASSWORD: jigsaw_web_d8
