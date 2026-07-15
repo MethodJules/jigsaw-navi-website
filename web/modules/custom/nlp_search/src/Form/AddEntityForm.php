@@ -168,7 +168,7 @@ class AddEntityForm extends FormBase
                         //Manuell hinzugefügte Entitäten sollten beim erneuten Indexieren von Nodes den Hauptknoten in Neo4j
                         //wieder zugeordnet werden können. Dafür werden die Entitäten in einem Json abgespeichert, das
                         //von Python geladen werden kann.
-                        $changed_entities_path = drupal_get_path('module', 'nlp_search') . '/nlp_python/changed_entities.json';
+                        $changed_entities_path = \Drupal::service('extension.list.module')->getPath('nlp_search') . '/nlp_python/changed_entities.json';
 
                         $changed_entities = array();
                         if (file_exists($changed_entities_path)) {

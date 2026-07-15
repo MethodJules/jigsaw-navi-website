@@ -95,7 +95,7 @@ class SearchForm extends FormBase
                     //Librarys laden und die Entitäten an das Javascript übergeben.
                     $form['#attached']['library'][] = 'nlp_search/nlpsearch_basic';
                     $form['#attached']['drupalSettings']['nlp_search']['entities'] = $entities['result'];
-                    $form['#attached']['drupalSettings']['nlp_search']['path'] = drupal_get_path('module', 'nlp_search');
+                    $form['#attached']['drupalSettings']['nlp_search']['path'] = \Drupal::service('extension.list.module')->getPath('nlp_search');
                     $form['#attached']['drupalSettings']['nlp_search']['entities_caption'] = '- ' . t('all entities') . ' -';
                     $form['#attached']['drupalSettings']['nlp_search']['rel_caption'] = '- ' . t('all relationships') . ' -';
 

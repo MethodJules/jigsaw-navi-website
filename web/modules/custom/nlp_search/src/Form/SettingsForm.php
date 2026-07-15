@@ -51,7 +51,7 @@ class SettingsForm extends ConfigFormBase {
 
         //Die unterschiedlichen Dateien öffnen, um die Anzahl der noch zu bearbeitenden Knoten, die Anzahl der exportierten
         //Knoten und die Anzahl der fehlgeschlagenen Knoten ermitteln zu können.
-        $mod_path = drupal_get_path('module', 'nlp_search');
+        $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
         $export_path = $mod_path . '/nlp_python/export';
         $export_file = $export_path . '/nodes_export.json';
         $nodes_export_arr = array();
@@ -472,7 +472,7 @@ class SettingsForm extends ConfigFormBase {
     public function reindexFailed(array &$form, FormStateInterface $form_state) {
 
         //Datei laden, zu der die fehlgeschlagenen Nodes wieder hinzugefügt werden sollen.
-        $mod_path = drupal_get_path('module', 'nlp_search');
+        $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
         $export_path = $mod_path . '/nlp_python/export';
         $export_file = $export_path . '/nodes_export.json';
         $nodes_arr = array();
@@ -578,7 +578,7 @@ class SettingsForm extends ConfigFormBase {
         $settings_revised = array();
 
         //Datei für die exportierten Nodes laden, damit die neuen zu exportierenden Nodes in das Array eingefügt werden können.
-        $mod_path = drupal_get_path('module', 'nlp_search');
+        $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
         $export_path = $mod_path . '/nlp_python/export';
         $export_file = $export_path . '/nodes_export.json';
         $nodes_arr = array();
@@ -613,7 +613,7 @@ class SettingsForm extends ConfigFormBase {
             $nids = \Drupal::entityQuery('node')
                 ->condition('status', 1)
                 ->condition('type', $content_type)
-                ->execute();
+                ->accessCheck(FALSE)->execute();
 
 
             //Jede Node iterieren, den Inhalt der Felder laden und im Array abspeichern.
@@ -740,7 +740,7 @@ class SettingsForm extends ConfigFormBase {
 
 
         //Konfigurationsdatei laden und die Werte zuweisen.
-        $mod_path = drupal_get_path('module', 'nlp_search');
+        $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
         $export_path = $mod_path . '/nlp_python';
         $config_file = $export_path . '/config.json';
         $config_arr = array();

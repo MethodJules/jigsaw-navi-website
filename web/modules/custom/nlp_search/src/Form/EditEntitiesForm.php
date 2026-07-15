@@ -164,7 +164,7 @@ class EditEntitiesForm extends FormBase
                     //automatischen Indexieren und Extrahieren von Informationen, diese Entitäten nicht wieder mit
                     //angelegt werden, falls es sich bei den gelöschten Entitäten um Entitäten handelt, die von CoreNLP
                     //extrahiert wurden.
-                    $changed_entities_path = drupal_get_path('module', 'nlp_search') . '/nlp_python/changed_entities.json';
+                    $changed_entities_path = \Drupal::service('extension.list.module')->getPath('nlp_search') . '/nlp_python/changed_entities.json';
                     $changed_entities = array();
                     if (file_exists($changed_entities_path)) {
                         $file = file_get_contents($changed_entities_path);
