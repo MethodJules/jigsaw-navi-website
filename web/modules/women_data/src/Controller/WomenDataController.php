@@ -20,17 +20,13 @@ class WomenDataController extends ControllerBase
         //$person_facts = json_decode($data, TRUE);
 
 
-        //dsm($person_facts);
         //$title = $person_facts['title'];
         //$bibliography = $person_facts['field_biography']['und'][0]['value'];
-        //dsm($title);
-        //dsm($bibliography);
 
 
         $person = $this->fetchDataOfPerson();
         $chronic = $this->fetchDataOfChronic();
         $activity = $this->fetchDataOfActivity();
-        dsm($activity);
         return [
             '#markup' => '<p>Funkt</p>',
         ];
@@ -42,7 +38,6 @@ class WomenDataController extends ControllerBase
         $data = file_get_contents($url);
         $person_facts = json_decode($data, TRUE);
 
-        //dsm($person_facts);
 
         if ($person_facts['title']) {
             $person['title'] = $person_facts['title'];
@@ -114,7 +109,6 @@ class WomenDataController extends ControllerBase
         $data = file_get_contents($url);
         $chronic_facts = json_decode($data, TRUE);
 
-       // dsm($chronic_facts);
 
         if(!empty($chronic_facts['title'])) {
             $chronic['title'] = $chronic_facts['title'];
@@ -140,7 +134,6 @@ class WomenDataController extends ControllerBase
         $data = file_get_contents($url);
         $activity_facts = json_decode($data, TRUE);
 
-        //dsm($person_facts);
 
         if (!empty($activity_facts['title'])) {
             $activity['title'] = $activity_facts['title'];
