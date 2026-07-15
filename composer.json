@@ -60,6 +60,7 @@
         "drupal/search_api": "^1.21",
         "drupal/search_api_solr": "^4.2",
         "drupal/showcase_lite": "^1.1",
+        "drupal/upgrade_status": "^3",
         "drush/drush": "10.x",
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^2.4",
@@ -76,7 +77,15 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "zaporylie/composer-drupal-optimizations": true
+        }
     },
     "autoload": {
         "classmap": [
