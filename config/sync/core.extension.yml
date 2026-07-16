@@ -5,7 +5,6 @@ module:
   automated_cron: 0
   bibcite: 0
   bibcite_bibtex: 0
-  bibcite_crossref: 0
   bibcite_entity: 0
   bibcite_import: 0
   big_pipe: 0
@@ -15,7 +14,7 @@ module:
   chat_widget: 0
   chosen: 0
   chosen_lib: 0
-  ckeditor: 0
+  ckeditor5: 0
   color: 0
   comment: 0
   config: 0
@@ -77,6 +76,7 @@ module:
   toolbar: 0
   tour: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_ui: 0
   menu_link_content: 1
