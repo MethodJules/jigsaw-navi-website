@@ -1,26 +1,24 @@
-FROM drupal:8.9-apache
+FROM drupal:10-php8.3-apache
 
 RUN apt-get update && apt-get install -y \
-	curl \
-	git \
-	#mysql-client \
-	vim \
-	wget
+    curl git default-mysql-client vim wget
 
-#Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt install -y nodejs
-RUN node --version
-RUN npm --version
-#Install composer
+# Install php thigs
+RUN apt-get update && apt-get install -y libicu-dev \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install intl
+
+# Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
-	php composer-setup.php && \
-	mv composer.phar /usr/local/bin/composer && \
-	php -r "unlink('composer-setup.php');"
-#Install drush
-RUN composer global require drush/drush
-#Install drupal console
-#RUN composer global require drupal/console:~1.0 --prefer-dist --optimize-autoloader
+    php composer-setup.php && \
+    mv composer.phar /usr/local/bin/composer && \
+    php -r "unlink('composer-setup.php');"
+
+# Install drush launcher
+RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar && \
+    chmod +x drush.phar && cp drush.phar /usr/local/bin/drush
+
+RUN composer config --no-plugins allow-plugins true
 
 RUN rm -rf /var/www/html/*
 
