@@ -1,6 +1,0 @@
-name: siddybot
-type: module
-description: Chatbot for jigsaw
-package: Custom
-core: 8.x
-core_version_requirement: ^9 || ^10 || ^11

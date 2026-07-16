@@ -213,7 +213,7 @@ function nlp_search_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityI
 
 //Funktion öffnet eine Datei, löscht den Eintrag für Content Type und speichert die Datei wieder ab.
 function delete_from_files($filename, $content_type, $nid) {
-    $mod_path = \Drupal::service(extension.list.module)->getPath('nlp_search');
+    $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
     $export_path = $mod_path . '/nlp_python';
     $export_file = $export_path . '/' . $filename;
 
@@ -251,7 +251,7 @@ function export_information($entity) {
             $settings_revised = array();
 
             //Datei für den Export öffnen, bei der die Node hinzugefügt wird.
-            $mod_path = \Drupal::service(extension.list.module)->getPath('nlp_search');
+            $mod_path = \Drupal::service('extension.list.module')->getPath('nlp_search');
             $export_path = $mod_path . '/nlp_python/export';
             $export_file = $export_path . '/nodes_export.json';
             $nodes_arr = array();
