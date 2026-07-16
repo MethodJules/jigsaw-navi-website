@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - contact
+    - file
     - filter
     - matomo
     - search
@@ -23,6 +24,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'delete own files'
   - 'opt-in or out of matomo tracking'
   - 'post comments'
   - 'search content'

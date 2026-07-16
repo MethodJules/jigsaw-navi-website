@@ -6,3 +6,4 @@ name: Foren
 vid: forums
 description: 'Forum Navigations-Vokabular'
 weight: -10
+new_revision: false

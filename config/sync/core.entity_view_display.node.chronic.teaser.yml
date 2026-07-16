@@ -27,3 +27,4 @@ hidden:
   field_sw_education: true
   field_time: true
   langcode: true
+  search_api_excerpt: true

@@ -13,8 +13,8 @@ _core:
   default_config_hash: KrXaqeflZagJH7TVHs0OeT4NyhsnT9kLXf4ejzLE0sg
 name: Domicile
 type: domicile
-description: ''
-help: ''
+description: null
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

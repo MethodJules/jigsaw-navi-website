@@ -6,5 +6,6 @@ _core:
   default_config_hash: 74E6VJdbjzHWKMMZ3pzcD0eHLkAZM9iTJATaNOZv2-o
 name: 'Professional Activities'
 vid: tax_morph_m_professional_activit
-description: ''
+description: null
 weight: 0
+new_revision: false

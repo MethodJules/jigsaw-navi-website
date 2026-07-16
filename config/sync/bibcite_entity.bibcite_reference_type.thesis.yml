@@ -6,7 +6,7 @@ _core:
   default_config_hash: KK4c7lmGzIRcwryNPYUT7Sj5EERrk-iC5nmXhPq24hc
 id: thesis
 label: Thesis
-description: 'A Master''s thesis.'
+description: "A Master's thesis."
 override: true
 fields:
   title:

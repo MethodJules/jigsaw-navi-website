@@ -6,5 +6,6 @@ _core:
   default_config_hash: 0wlxlsTiGYPfJx77ilUS1EuGPHlbhzJ-j2N3W-5BfLI
 name: 'Academic Activities'
 vid: tax_morph_m_academic_activities
-description: ''
+description: null
 weight: 0
+new_revision: false

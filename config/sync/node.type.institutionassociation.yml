@@ -12,7 +12,7 @@ _core:
   default_config_hash: hvctV6jQVKRokmbIm6LDXYbrIc_2j6yUwNt5M45lDSI
 name: Institution-Association
 type: institutionassociation
-description: ''
+description: null
 help: 'Please add the name of the institution or association. For German institutions/associations, use the German original name and add an English translation in brackets. For institutions/associations in Hebrew, please use the English name.'
 new_revision: false
 preview_mode: 1

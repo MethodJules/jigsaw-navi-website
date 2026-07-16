@@ -12,6 +12,7 @@ dependencies:
     - node.type.place
     - node.type.sweducation
   module:
+    - file
     - node
     - quickedit
     - tour
@@ -33,6 +34,7 @@ permissions:
   - 'delete own activitiy content'
   - 'delete own chronic content'
   - 'delete own domicile content'
+  - 'delete own files'
   - 'delete own institutionassociation content'
   - 'delete own page content'
   - 'delete own person content'

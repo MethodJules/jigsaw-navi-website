@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Education Type'
 vid: tax_morph_m_education_type
-description: ''
+description: null
 weight: 0
+new_revision: false

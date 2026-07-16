@@ -11,5 +11,6 @@ _core:
   default_config_hash: CPCpnlGWsitm9GY7PprWicXgG44mga6NkcmB2BjzTAQ
 id: bibcite_reference.citation
 label: Citation
+description: ''
 targetEntityType: bibcite_reference
 cache: true

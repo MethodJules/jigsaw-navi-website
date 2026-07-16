@@ -11,5 +11,6 @@ _core:
   default_config_hash: GOmCoUsBSKdQ-5JzMTbQOrWdswxUy1E0S_eGZ617SvA
 id: bibcite_reference.table
 label: Table
+description: ''
 targetEntityType: bibcite_reference
 cache: true

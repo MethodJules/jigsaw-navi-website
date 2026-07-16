@@ -6,5 +6,6 @@ _core:
   default_config_hash: jgD_riky9rn85_emVkreanVKhkevswfeVtk-S1qHAxM
 name: 'Educational Activities'
 vid: tax_morph_m_educational_activiti
-description: ''
+description: null
 weight: 0
+new_revision: false

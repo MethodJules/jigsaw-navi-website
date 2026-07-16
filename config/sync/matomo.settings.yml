@@ -21,6 +21,8 @@ track:
 privacy:
   donottrack: true
   disablecookies: false
+  cookieduration: null
+  securecookies: false
 custom:
   variable:
     1:
@@ -55,3 +57,5 @@ translation_set: false
 cache: false
 page_title_hierarchy: false
 page_title_hierarchy_exclude_home: true
+disable_tracking: false
+status_codes_disabled: {  }

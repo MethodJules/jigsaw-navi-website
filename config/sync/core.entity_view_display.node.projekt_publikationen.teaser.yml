@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.projekt_publikationen.body
+    - field.field.node.projekt_publikationen.field_bib_reference
+    - field.field.node.projekt_publikationen.field_pdf_file
     - node.type.projekt_publikationen
   module:
     - text
@@ -28,4 +30,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_bib_reference: true
+  field_pdf_file: true
   langcode: true
+  search_api_excerpt: true

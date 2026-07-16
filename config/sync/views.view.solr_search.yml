@@ -48,6 +48,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 5
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -62,7 +63,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
+        type: search_api_none
         options: {  }
       empty: {  }
       sorts:
@@ -502,7 +503,7 @@ display:
               tax_morph_m_other_activities: default
               tax_morph_m_professional_activit: default
       query:
-        type: views_query
+        type: search_api_query
         options:
           bypass_access: false
           skip_access: false
@@ -551,7 +552,7 @@ display:
     position: 1
     display_options:
       cache:
-        type: none
+        type: search_api_none
       defaults:
         cache: false
       exposed_block: true

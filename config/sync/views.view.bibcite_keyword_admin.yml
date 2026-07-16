@@ -211,6 +211,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -360,4 +361,3 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
-core: 8.x

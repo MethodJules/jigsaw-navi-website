@@ -13,8 +13,8 @@ _core:
   default_config_hash: J6-fJn5hHCtOMjprmAl5V9L73OPI9gJe4P_DFS8HyaQ
 name: Chronic
 type: chronic
-description: ''
-help: ''
+description: null
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false
