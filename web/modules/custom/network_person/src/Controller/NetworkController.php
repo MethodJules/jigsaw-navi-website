@@ -35,7 +35,7 @@ class NetworkController extends ControllerBase {
     try {
       $node_storage = $this->entityTypeManager()->getStorage('node');
       $query = $this->entityTypeManager->getStorage('node')->getQuery();
-      $query->condition('type', 'person');
+      $query->condition('type', 'person')->accessCheck(FALSE);
       $nids = $query->execute();
       $personNodes = $node_storage->loadMultiple($nids);
     } catch (InvalidPluginDefinitionException $e) {
