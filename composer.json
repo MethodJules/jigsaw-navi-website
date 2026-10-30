@@ -28,21 +28,26 @@
                     "composer/installers": "^2.0"
                 }
             }
+        },
+        {
+            "type": "path",
+            "url": "web/themes/custom/showcase_lite"
         }
     ],
     "require": {
         "php": ">=5.6",
         "composer/installers": "^2.0",
-        "cweagans/composer-patches": "^1.6.5",
+        "cweagans/composer-patches": "^2.0",
         "drupal/address": "^2.0",
         "drupal/bartik": "^1.0",
         "drupal/bibcite": "^3.1",
         "drupal/chosen": "^4.0",
-        "drupal/classy": "^1.0",
-        "drupal/color": "^1.0",
-        "drupal/core-composer-scaffold": "^10.6",
-        "drupal/core-project-message": "^10.6",
-        "drupal/core-recommended": "^10.6",
+        "drupal/classy": "^2.0",
+        "drupal/color": "^2.0@alpha",
+        "drupal/core-composer-scaffold": "^11.3",
+        "drupal/core-project-message": "^11.3",
+        "drupal/core-recommended": "^11.3",
+        "drupal/ctools": "^4.0",
         "drupal/devel": "^5.0",
         "drupal/facets": "^3.0",
         "drupal/facets_range_widget": "^3.0",
@@ -51,21 +56,18 @@
         "drupal/leaflet": "^10.0",
         "drupal/matomo": "^2.0",
         "drupal/optional_end_date": "^1.0@beta",
-        "drupal/quickedit": "^1.0",
-        "drupal/rdf": "^2.0",
+        "drupal/rdf": "^3.0@beta",
         "drupal/search_api": "^1.21",
         "drupal/search_api_solr": "^4.2",
-        "drupal/seven": "^1.0",
-        "drupal/showcase_lite": "^1.1",
         "drupal/stable": "^2.0",
         "drupal/upgrade_status": "^4.3",
-        "drush/drush": "^12",
+        "drush/drush": "^13",
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^5.0",
         "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.6"
+        "drupal/core-dev": "^11.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -83,6 +85,7 @@
             "drupal/core-project-message": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": true,
             "zaporylie/composer-drupal-optimizations": true
         }
