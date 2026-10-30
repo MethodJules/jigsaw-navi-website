@@ -1,0 +1,24 @@
+services:
+  jigsaw_web_d8_db:
+    networks:
+      - default            # DB stays internal, no published port
+
+  jigsaw_web_d8_drupal:
+    networks:
+      - default            # to reach the DB
+      - traefik_network    # to be reached by Traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_network"
+      - "traefik.http.routers.jigsaw_http.entrypoints=http"
+      - "traefik.http.routers.jigsaw_http.rule=Host(`jigsaw.x-navi.de`)"
+      - "traefik.http.routers.jigsaw_http.middlewares=redirect-to-https@file"
+      - "traefik.http.routers.jigsaw_https.entrypoints=https"
+      - "traefik.http.routers.jigsaw_https.rule=Host(`jigsaw.x-navi.de`)"
+      - "traefik.http.routers.jigsaw_https.tls=true"
+      - "traefik.http.routers.jigsaw_https.middlewares=security-headers@file"
+      - "traefik.http.services.jigsaw_service.loadbalancer.server.port=80"
+
+networks:
+  traefik_network:
+    external: true

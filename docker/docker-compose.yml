@@ -2,25 +2,20 @@ version: '3'
 services:
   jigsaw_web_d8_db:
     image: mysql:8.3
-    container_name: jigsaw_web_d8_db
     command: --max_allowed_packet=32505856 --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_DATABASE: jigsaw_web_d8
-      MYSQL_ROOT_PASSWORD: jigsaw_web_d8
-    ports:
-      - "3306:3306"
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-jigsaw_web_d8}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-jigsaw_web_d8}
     volumes:
       - jigsaw_web_d8_db_data:/var/lib/mysql
     restart: always
   jigsaw_web_d8_drupal:
+    build: .
     depends_on:
       - jigsaw_web_d8_db
-    build: .
-    container_name: jigsaw_web_d8_drupal
-    ports:
-      - "8080:80"
     volumes:
       - ..:/app
     restart: always
+
 volumes:
   jigsaw_web_d8_db_data:

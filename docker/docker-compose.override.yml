@@ -1,0 +1,9 @@
+services:
+  jigsaw_web_d8_db:
+    container_name: jigsaw_web_d8_db
+    ports:
+      - "3306:3306"
+  jigsaw_web_d8_drupal:
+    container_name: jigsaw_web_d8_drupal
+    ports:
+      - "8080:80"
