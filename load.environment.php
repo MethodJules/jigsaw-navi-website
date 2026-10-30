@@ -6,15 +6,13 @@
  */
 
 use Dotenv\Dotenv;
-use Dotenv\Exception\InvalidPathException;
 
 /**
  * Load any .env file. See /.env.example.
+ *
+ * Drupal has no official method for loading environment variables and uses
+ * various techniques to set and get them. Environment variables loaded from
+ * .env will be available through getenv(), $_ENV and $_SERVER.
  */
-$dotenv = new Dotenv(__DIR__);
-try {
-  $dotenv->load();
-}
-catch (InvalidPathException $e) {
-  // Do nothing. Production environments rarely use .env files.
-}
+$dotenv = Dotenv::createUnsafeImmutable(__DIR__);
+$dotenv->safeLoad();
